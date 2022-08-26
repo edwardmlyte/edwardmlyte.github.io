@@ -1,11 +1,10 @@
 # The URL the site will be built for
 base_url = "https://edwardmlyte.github.io/"
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+default_language = "en"
+theme = "ataraxia"
+compile_sass = false
 
 [markdown]
 # Whether to do syntax highlighting
@@ -13,4 +12,44 @@ build_search_index = false
 highlight_code = false
 
 [extra]
-# Put all your custom variables here
+    author = "Ed Maxwell-Lyte"
+    locale = "en_GB"
+    avatar = "images/avatar.png"
+
+    [extra.menus]
+        nav = [
+            { name = "Index", url = "@/_index.md", icon = "bi-house" },
+        ]
+
+    [extra.social]
+        author_link = "https://edwardmlyte.github.io/"
+        twitter = "@edwardmlyte"
+        links = [
+            { name = "GitHub", url = "https://github.com/edwardmlyte", icon = "bi-github" },
+            { name = "Twitter", url = "https://twitter.com/edwardmlyte", icon = "bi-twitter" },
+            { name = "LinkedIn", url = "https://www.linkedin.com/in/edwardmlyte", icon = "bi-linkedin" }
+        ]
+
+    [extra.copyright]
+        name = "CC BY 4.0"
+        url = "https://creativecommons.org/licenses/by/4.0/"
+
+[languages]
+    [languages.en]
+        title = "Edward Maxwell-Lyte"
+        description = "Developer Experience Engineer"
+        generate_feed = false
+
+    [languages.en.translations]
+        search = "Search"
+
+        404_message = "Page not found"
+        
+        next = "Next"
+        previous = "Previous"
+        short_copyright = "Some rights reserved."
+        full_copyright = """\
+            Except where otherwise noted, the blog posts on this site are \
+            licensed under the Creative Commons Attribution 4.0 International \
+            (CC BY 4.0) License by the author.\
+            """
